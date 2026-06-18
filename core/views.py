@@ -43,7 +43,7 @@ def robots_txt(request):
     lines = [
         "User-agent: *",
         "Allow: /",
-        "Sitemap: https://your-domain.com/sitemap.xml",
+        "Sitemap: https://whoistordi.pythonanywhere.com/sitemap.xml",
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
 

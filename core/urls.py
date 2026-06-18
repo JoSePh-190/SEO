@@ -8,9 +8,5 @@ urlpatterns = [
     path('blogs/', views.blogs, name='blogs'),
     path('blog/<slug:slug>/', views.blog_detail, name='blog_detail'),
     path("robots.txt", views.robots_txt, name='robots_txt'),
-    path(
-    'who-is-gbarabe-tordi-joseph/',
-    views.profile,
-    name='profile'
-)
+    path('who-is-gbarabe-tordi-joseph/', views.profile, name='profile'),
 ]

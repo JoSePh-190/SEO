@@ -25,5 +25,8 @@ class BlogSitemap(Sitemap):
     def items(self):
         return Blog.objects.all()
 
-    def lastmod(self, obj):
-        return obj.created_at
+    def location(self, obj):
+        return reverse(
+            'blog_detail',
+            kwargs={'slug': obj.slug}
+        )
