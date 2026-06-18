@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="hero">
+  <span class="eyebrow">Petroleum Engineering · Software Development</span>
+  <h1>Gbarabe Tordi&nbsp;Joseph</h1>
+  <p class="hero-sub">
+    Engineering student at the <strong>University of Port Harcourt</strong> building
+    software tools where reservoir science meets modern web technology.
+  </p>
+  <div class="hero-tags">
+    <span class="tag">Python</span>
+    <span class="tag">Django</span>
+    <span class="tag">Reservoir Engineering</span>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <span class="eyebrow">What I Do</span>
+  <h2>Software Developer</h2>
+  <p>Specialising in Python &amp; Django — engineering web applications that solve real problems in petroleum and reservoir science.</p>
+</section>
+
+<section class="section">
+  <span class="eyebrow">Projects</span>
+  <h2>Tools I've Built</h2>
+  <ul class="project-list">
+    <li class="card project-card">
+      <h3>MBE Calculator Solver</h3>
+      <p>Material Balance Equation solver for reservoir pressure and fluid production analysis.</p>
+    </li>
+    <li class="card project-card">
+      <h3>EOR Calculator Solver</h3>
+      <p>Enhanced Oil Recovery calculator for evaluating recovery method feasibility.</p>
+    </li>
+    <li class="card project-card">
+      <h3>Engineering Web Applications</h3>
+      <p>Full-stack Django applications built to bring engineering workflows online.</p>
+    </li>
+  </ul>
+</section>
+
+<style>
+  /* Hero */
+  .hero { margin-bottom: 1rem; }
+  .hero h1 { margin-top: .4rem; }
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--muted);
+    max-width: 56ch;
+    margin-bottom: 1.4rem;
+    opacity: 1;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+  /* Sections */
+  .section { margin-bottom: 2.5rem; }
+
+  /* Project list reset */
+  .project-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .project-card h3 { font-size: 1rem; margin-bottom: .4rem; color: var(--accent); }
+  .project-card p  { font-size: .9rem; margin-bottom: 0; opacity: .8; }
+</style>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog | Gbarabe Tordi Joseph{% endblock %}
+
+{% block content %}
+
+<span class="eyebrow">Writing</span>
+<h1>Blog Articles</h1>
+<p class="page-intro">Thoughts on petroleum engineering, software development, and building tools at the intersection of both.</p>
+
+<div class="blog-list">
+
+  {% for blog in blogs %}
+
+  <article class="card blog-card">
+    <div class="blog-meta">
+      <time class="blog-date">{{ blog.created_at|date:"F d, Y" }}</time>
+    </div>
+    <h2 class="blog-title">{{ blog.title }}</h2>
+    <p class="blog-excerpt">{{ blog.excerpt }}</p>
+    <a href="{% url 'blog_detail' blog.slug %}" class="read-more">
+      Read article <span aria-hidden="true">→</span>
+    </a>
+  </article>
+
+  {% empty %}
+
+  <div class="empty-state">
+    <p>No articles yet — check back soon.</p>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+<style>
+  .page-intro {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    opacity: 1;
+  }
+
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .blog-date {
+    font-family: var(--display);
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: .03em;
+  }
+
+  .blog-title {
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    margin-bottom: 0;
+    transition: color .15s;
+  }
+  .blog-card:hover .blog-title { color: var(--accent); }
+
+  .blog-excerpt {
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    opacity: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .read-more {
+    font-family: var(--display);
+    font-size: .82rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .02em;
+    align-self: flex-start;
+    transition: opacity .15s;
+  }
+  .read-more:hover { opacity: .7; }
+
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+  }
+  .empty-state p { margin: 0; opacity: 1; }
+</style>
+
+{% endblock %}

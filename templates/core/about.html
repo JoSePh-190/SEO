@@ -1,0 +1,425 @@
+{% extends 'base.html' %}
+
+{% block title %}About | Gbarabe Tordi Joseph{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero ─────────────────────────────────────────── -->
+<section class="about-hero">
+  <span class="eyebrow">About Me</span>
+  <h1>Gbarabe Tordi&nbsp;Joseph</h1>
+  <p class="about-lead">
+    Final-year Petroleum Engineering student at the University of Port Harcourt
+    and a professional software developer building intelligent tools at the
+    intersection of engineering science and modern web technology.
+  </p>
+  <div class="about-badges">
+    <span class="tag">Python</span>
+    <span class="tag">Django</span>
+    <span class="tag">Petroleum Engineering</span>
+    <span class="tag">Reservoir Engineering</span>
+    <span class="tag">EOR</span>
+    <span class="tag">Full-Stack Web</span>
+  </div>
+</section>
+
+<hr>
+
+<!-- ── Who I Am ──────────────────────────────────────── -->
+<section class="about-section">
+  <span class="eyebrow">Who I Am</span>
+  <h2>Engineer by Training. Developer by Practice.</h2>
+
+  <p>
+    My name is Gbarabe Tordi Joseph. I am a final-year Petroleum Engineering student at the
+    <strong>University of Port Harcourt</strong>, one of Nigeria's foremost centres for
+    engineering education. Throughout my undergraduate journey, I have developed a rigorous
+    grounding in the science of subsurface fluid behaviour, reservoir characterisation, well
+    performance, and enhanced oil recovery — disciplines that demand both analytical precision
+    and creative problem-solving.
+  </p>
+  <p>
+    Alongside my engineering studies, I work professionally as a software developer. I build
+    web applications and computational tools in Python and Django, translating complex
+    engineering workflows into software that engineers and students can use directly in
+    the browser. My work sits at a rare intersection: I understand the physics deeply
+    enough to model it correctly, and I understand software well enough to ship it cleanly.
+  </p>
+</section>
+
+<hr>
+
+<!-- ── Education ─────────────────────────────────────── -->
+<section class="about-section">
+  <span class="eyebrow">Education</span>
+  <h2>University of Port Harcourt</h2>
+
+  <div class="edu-card card">
+    <div class="edu-header">
+      <div>
+        <h3>B.Eng. Petroleum Engineering</h3>
+        <p class="edu-school">University of Port Harcourt, Rivers State, Nigeria</p>
+      </div>
+      <span class="tag">Final Year</span>
+    </div>
+    <p>
+      My programme covers the full lifecycle of hydrocarbon production — from exploration
+      geology and petrophysics through to reservoir simulation, production engineering,
+      and surface facilities design. Key areas of study include:
+    </p>
+    <ul class="edu-list">
+      <li>Reservoir Fluid Properties &amp; Phase Behaviour</li>
+      <li>Material Balance Equations (MBE) &amp; Reservoir Drive Mechanisms</li>
+      <li>Enhanced Oil Recovery (EOR) — chemical, thermal, and miscible methods</li>
+      <li>Well Log Analysis &amp; Formation Evaluation</li>
+      <li>Drilling Engineering &amp; Well Completion</li>
+      <li>Production Optimisation &amp; Nodal Analysis</li>
+      <li>Petroleum Economics &amp; Field Development Planning</li>
+    </ul>
+    <p class="edu-note">
+      As a final-year student, I am currently completing my undergraduate research project,
+      which applies computational methods to reservoir engineering problems — combining my
+      two disciplines in one body of work.
+    </p>
+  </div>
+</section>
+
+<hr>
+
+<!-- ── Software Development ───────────────────────────── -->
+<section class="about-section">
+  <span class="eyebrow">Software Development</span>
+  <h2>Professional Developer</h2>
+
+  <p>
+    I have built production-grade web applications using Python and the Django framework,
+    with a particular focus on engineering calculation tools, data-driven dashboards, and
+    educational platforms. My development practice emphasises clean architecture, readable
+    code, and a user experience that makes technical content genuinely accessible.
+  </p>
+
+  <div class="skills-grid">
+    <div class="skill-group card">
+      <h3>Languages</h3>
+      <ul>
+        <li>Python — primary language for all backend and scientific work</li>
+        <li>JavaScript — DOM manipulation, async fetch, lightweight interactivity</li>
+        <li>HTML5 &amp; CSS3 — semantic markup and responsive layouts</li>
+        <li>SQL — relational data modelling and query optimisation</li>
+      </ul>
+    </div>
+    <div class="skill-group card">
+      <h3>Frameworks &amp; Libraries</h3>
+      <ul>
+        <li>Django — full-stack web framework, ORM, auth, admin</li>
+        <li>Django REST Framework — RESTful API design</li>
+        <li>NumPy &amp; SciPy — numerical computation and equation solving</li>
+        <li>Matplotlib — data visualisation and chart generation</li>
+      </ul>
+    </div>
+    <div class="skill-group card">
+      <h3>Tools &amp; Workflow</h3>
+      <ul>
+        <li>Git &amp; GitHub — version control and collaborative development</li>
+        <li>PostgreSQL &amp; SQLite — database backends</li>
+        <li>Linux / Bash — server administration and scripting</li>
+        <li>VS Code — primary development environment</li>
+      </ul>
+    </div>
+    <div class="skill-group card">
+      <h3>Engineering Software</h3>
+      <ul>
+        <li>ECLIPSE / INTERSECT — industry-standard reservoir simulators</li>
+        <li>PIPESIM — production system modelling</li>
+        <li>PVTi — fluid property characterisation</li>
+        <li>Microsoft Excel — engineering data analysis and reporting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ── Projects ───────────────────────────────────────── -->
+<section class="about-section">
+  <span class="eyebrow">Featured Work</span>
+  <h2>Tools I've Built</h2>
+  <p>
+    Every project I build solves a real problem I encountered in my engineering studies or
+    in working with other students. The goal is always the same: replace a laborious
+    spreadsheet process with something faster, more transparent, and shareable.
+  </p>
+
+  <div class="projects-list">
+
+    <div class="project-item card">
+      <div class="project-top">
+        <h3>MBE Calculator Solver</h3>
+        <span class="tag">Reservoir Engineering</span>
+      </div>
+      <p>
+        A web-based Material Balance Equation solver that accepts reservoir production
+        history and fluid PVT data to estimate original fluids in place and identify
+        the dominant drive mechanism. Eliminates the need for complex manual iteration
+        and provides instant graphical diagnostics — Havlena-Odeh and F vs Eo plots
+        rendered in the browser.
+      </p>
+      <div class="project-stack">
+        <span class="stack-item">Python</span>
+        <span class="stack-item">Django</span>
+        <span class="stack-item">NumPy</span>
+        <span class="stack-item">Matplotlib</span>
+      </div>
+    </div>
+
+    <div class="project-item card">
+      <div class="project-top">
+        <h3>EOR Calculator Solver</h3>
+        <span class="tag">Enhanced Oil Recovery</span>
+      </div>
+      <p>
+        An Enhanced Oil Recovery screening and calculation tool that evaluates candidate
+        reservoirs against established technical criteria for water flooding, polymer
+        flooding, CO₂ miscible injection, and thermal methods. Outputs a ranked
+        suitability report and incremental recovery estimates, helping engineers make
+        fast, evidence-based decisions during field development planning.
+      </p>
+      <div class="project-stack">
+        <span class="stack-item">Python</span>
+        <span class="stack-item">Django</span>
+        <span class="stack-item">SciPy</span>
+        <span class="stack-item">REST API</span>
+      </div>
+    </div>
+
+    <div class="project-item card">
+      <div class="project-top">
+        <h3>Engineering Web Applications</h3>
+        <span class="tag">Full-Stack</span>
+      </div>
+      <p>
+        A suite of purpose-built Django web applications for petroleum and reservoir
+        engineering education. Each application provides an interactive interface for
+        a specific calculation workflow — from Darcy's Law permeability estimation to
+        nodal analysis and wellbore pressure loss — making engineering computation
+        accessible without any specialist software installation.
+      </p>
+      <div class="project-stack">
+        <span class="stack-item">Django</span>
+        <span class="stack-item">PostgreSQL</span>
+        <span class="stack-item">JavaScript</span>
+        <span class="stack-item">CSS3</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<!-- ── Approach ───────────────────────────────────────── -->
+<section class="about-section">
+  <span class="eyebrow">How I Work</span>
+  <h2>My Approach</h2>
+
+  <div class="approach-grid">
+    <div class="approach-item">
+      <div class="approach-icon">⚙</div>
+      <h3>Engineering First</h3>
+      <p>
+        Every tool I build starts from the engineering problem, not the technology.
+        I make sure the underlying physics or mathematics is correct before a single
+        line of framework code is written.
+      </p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-icon">📐</div>
+      <h3>Clean Architecture</h3>
+      <p>
+        I write code that can be read, maintained, and extended. Django's MTV pattern
+        keeps my projects organised, and I test calculation logic independently from
+        the presentation layer.
+      </p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-icon">🎯</div>
+      <h3>User-Centred Design</h3>
+      <p>
+        My users are engineers and students, not necessarily technical users. I design
+        interfaces that guide the user through a workflow without requiring them to
+        understand the code behind it.
+      </p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-icon">📈</div>
+      <h3>Continuous Learning</h3>
+      <p>
+        Both petroleum engineering and software development evolve quickly. I stay
+        current across both fields — following advances in reservoir simulation
+        on one side and modern Python tooling on the other.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ── Get in Touch ───────────────────────────────────── -->
+<section class="about-section contact-section">
+  <span class="eyebrow">Get in Touch</span>
+  <h2>Let's Work Together</h2>
+  <p>
+    I am open to collaboration on engineering software projects, freelance web development
+    work, and research partnerships — particularly anything that sits at the intersection
+    of petroleum engineering and computational tools. If you're building something in that
+    space, I'd like to hear about it.
+  </p>
+  <a href="/blogs/" class="cta-btn">Read My Blog →</a>
+</section>
+
+
+<!-- ── Page Styles ────────────────────────────────────── -->
+<style>
+  /* Hero */
+  .about-hero { margin-bottom: .5rem; }
+  .about-hero h1 { margin-top: .35rem; }
+  .about-lead {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--muted);
+    max-width: 60ch;
+    margin: .75rem 0 1.4rem;
+    line-height: 1.7;
+    opacity: 1;
+  }
+  .about-badges { display: flex; flex-wrap: wrap; gap: .45rem; }
+
+  /* Sections */
+  .about-section { margin-bottom: .5rem; }
+  .about-section > p { max-width: 68ch; }
+
+  /* Education card */
+  .edu-card { margin-top: 1.2rem; }
+  .edu-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .edu-header h3 { font-size: 1.15rem; margin-bottom: .2rem; }
+  .edu-school { font-size: .88rem; color: var(--accent); opacity: 1; margin: 0; }
+  .edu-list {
+    margin: .75rem 0 1rem 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: .3rem .5rem;
+  }
+  .edu-list li { font-size: .9rem; color: var(--muted); margin: 0; }
+  .edu-note {
+    font-size: .88rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 0;
+    opacity: 1;
+    border-left: 2px solid var(--accent);
+    padding-left: .85rem;
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+  .skill-group h3 {
+    font-size: .95rem;
+    color: var(--accent);
+    margin-bottom: .65rem;
+  }
+  .skill-group ul { list-style: none; padding: 0; }
+  .skill-group li {
+    font-size: .875rem;
+    color: var(--muted);
+    padding: .3rem 0;
+    border-bottom: 1px solid var(--border);
+    margin: 0;
+  }
+  .skill-group li:last-child { border-bottom: none; }
+
+  /* Projects */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1.25rem;
+  }
+  .project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: .6rem;
+    flex-wrap: wrap;
+  }
+  .project-top h3 { font-size: 1.1rem; margin: 0; }
+  .project-item > p { font-size: .92rem; color: var(--muted); margin-bottom: .85rem; opacity: 1; }
+  .project-stack { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .stack-item {
+    font-family: var(--display);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: .18rem .55rem;
+    border-radius: 4px;
+  }
+
+  /* Approach */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+  .approach-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+  }
+  .approach-icon {
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+    display: block;
+  }
+  .approach-item h3 { font-size: 1rem; margin-bottom: .5rem; }
+  .approach-item p  { font-size: .88rem; color: var(--muted); margin: 0; opacity: 1; }
+
+  /* Contact */
+  .contact-section p { max-width: 58ch; margin-bottom: 1.5rem; }
+  .cta-btn {
+    display: inline-block;
+    font-family: var(--display);
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: var(--bg);
+    background: var(--accent);
+    padding: .75rem 1.6rem;
+    border-radius: 6px;
+    transition: opacity .15s, transform .15s;
+  }
+  .cta-btn:hover { opacity: .88; transform: translateY(-1px); }
+
+  /* Mobile tweaks */
+  @media (max-width: 500px) {
+    .edu-header { flex-direction: column; }
+    .project-top { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+{% endblock %}
