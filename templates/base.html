@@ -2,127 +2,54 @@
 <html lang="en">
 <head>
 
-<title>
-{% block title %}Gbarabe Tordi Joseph{% endblock %}
-</title>
+<title>{% block title %}Gbarabe Tordi Joseph{% endblock %}</title>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
-
-<meta name="author"
-      content="Gbarabe Tordi Joseph">
-
-<meta name="robots"
-      content="index,follow">
-
-<meta name="keywords"
-      content="
-      Petroleum Engineering,
-      Software Developer,
-      Django Developer,
-      Python Developer,
-      University of Port Harcourt,
-      MBE Calculator,
-      EOR Calculator
-      ">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Gbarabe Tordi Joseph">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="Petroleum Engineering, Software Developer, Django Developer, Python Developer, University of Port Harcourt, MBE Calculator, EOR Calculator">
 <meta property="og:type" content="website">
-
-<meta property="og:title"
-      content="Gbarabe Tordi Joseph">
-
-<meta property="og:description"
-      content="Petroleum Engineering Student and Software Developer">
-
-<meta property="og:url"
-      content="{{ request.build_absolute_uri }}">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-      content="{{ blog.excerpt | default:'Petroleum Engineering Student and Software Developer at the University of Port Harcourt' }}">
+<meta property="og:title" content="Gbarabe Tordi Joseph">
+<meta property="og:description" content="Petroleum Engineering Student and Software Developer">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta name="description" content="{{ blog.excerpt | default:'Petroleum Engineering Student and Software Developer at the University of Port Harcourt' }}">
 
 <script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Person",
- "name":"Gbarabe Tordi Joseph",
- "jobTitle":"Software Developer",
- "description":"Petroleum Engineering student and software developer",
- "alumniOf":{"@type":"CollegeOrUniversity","name":"University of Port Harcourt"},
- "knowsAbout":["Python","Django","Petroleum Engineering","Reservoir Engineering"]
-}
+{"@context":"https://schema.org","@type":"Person","name":"Gbarabe Tordi Joseph","jobTitle":"Software Developer","description":"Petroleum Engineering student and software developer","alumniOf":{"@type":"CollegeOrUniversity","name":"University of Port Harcourt"},"knowsAbout":["Python","Django","Petroleum Engineering","Reservoir Engineering"]}
 </script>
-
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Gbarabe Tordi Joseph",
-  "jobTitle":"Software Developer",
-  "description":"Petroleum Engineering Student and Software Developer",
-  "url":"https://whoistordi.pythonanywhere.com/",
-  "knowsAbout":[
-      "Python",
-      "Django",
-      "Petroleum Engineering",
-      "Reservoir Engineering",
-      "Software Development"
-  ],
-  "alumniOf":{
-      "@type":"CollegeOrUniversity",
-      "name":"University of Port Harcourt"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Gbarabe Tordi Joseph",
-  "jobTitle": "Software Developer",
-  "description": "Petroleum Engineering student and developer of engineering calculators",
-  "affiliation": {
-    "@type": "CollegeOrUniversity",
-    "name": "University of Port Harcourt"
-  },
-  "knowsAbout": [
-    "Petroleum Engineering",
-    "Reservoir Engineering",
-    "Material Balance Equation",
-    "Enhanced Oil Recovery",
-    "Python",
-    "Django"
-  ],
-  "url": "https://whoistordi.pythonanywhere.com"
-}
+{"@context":"https://schema.org","@type":"Person","name":"Gbarabe Tordi Joseph","jobTitle":"Software Developer","description":"Petroleum Engineering Student and Software Developer","url":"https://whoistordi.pythonanywhere.com/","knowsAbout":["Python","Django","Petroleum Engineering","Reservoir Engineering","Software Development"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Port Harcourt"}}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ── Design tokens ────────────────────────────────── */
+/* ── Tokens ──────────────────────────────────────── */
 :root {
-  --bg:          #0B1120;
-  --surface:     #131d33;
-  --surface-2:   #192540;
-  --border:      #1e2e4a;
-  --text:        #EEF0F4;
-  --muted:       #6B7A99;
-  --accent:      #E8A94D;
-  --accent-glow: rgba(232,169,77,.15);
-  --display:     'Space Grotesk', sans-serif;
-  --body:        'Inter', sans-serif;
-  --nav-h:       60px;
-  --radius:      10px;
+  --bg:         #060D1A;
+  --surface:    #0E1A2E;
+  --surface-2:  #162034;
+  --border:     #1A2B46;
+  --border-lit: #243650;
+  --text:       #D0D6E2;
+  --muted:      #5A6D8C;
+  --amber:      #C4924A;
+  --amber-dim:  rgba(196,146,74,.12);
+  --teal:       #4DB8A4;
+  --teal-dim:   rgba(77,184,164,.10);
+  --display:    'Space Grotesk', sans-serif;
+  --body:       'Inter', sans-serif;
+  --mono:       'JetBrains Mono', monospace;
+  --nav-h:      58px;
+  --r:          8px;
+  --r-lg:       12px;
+  --max-w:      760px;
 }
 
-/* ── Reset ────────────────────────────────────────── */
+/* ── Reset ───────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -130,7 +57,7 @@ body {
   color: var(--text);
   font-family: var(--body);
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.78;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -138,71 +65,74 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
-ul, ol { padding-left: 1.4rem; }
-li { margin-bottom: .35rem; }
+ul, ol { padding-left: 1.35rem; }
+li { margin-bottom: .4rem; }
 
-/* ── Nav ──────────────────────────────────────────── */
-nav {
+/* ── Nav ─────────────────────────────────────────── */
+nav.primary {
   position: sticky;
   top: 0;
   z-index: 200;
   height: var(--nav-h);
-  background: rgba(11,17,32,.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(6,13,26,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
-  padding: 0 clamp(1.25rem, 5vw, 3rem);
+  padding: 0 clamp(1.25rem, 5vw, 3.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-logo {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: .95rem;
-  letter-spacing: -.02em;
+  font-family: var(--mono);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  color: var(--text);
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: .45rem;
   white-space: nowrap;
   z-index: 201;
 }
-.nav-logo::before {
-  content: '';
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
+.nav-logo .pipe {
+  color: var(--amber);
+  font-weight: 400;
+  margin: 0 .1em;
+  animation: blink 1.1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
-/* Desktop links */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.2rem;
 }
 .nav-links a {
   font-family: var(--display);
-  font-size: .875rem;
+  font-size: .8rem;
   font-weight: 500;
   color: var(--muted);
-  letter-spacing: .01em;
-  transition: color .2s;
+  letter-spacing: .03em;
+  transition: color .18s;
   position: relative;
 }
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: -3px; left: 0;
-  width: 0; height: 1px;
-  background: var(--accent);
+  bottom: -4px; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--amber);
   transition: width .2s ease;
 }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
-/* Hamburger button */
+/* ── Hamburger ───────────────────────────────────── */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -217,223 +147,271 @@ nav {
 }
 .nav-toggle span {
   display: block;
-  height: 2px;
-  background: var(--text);
+  height: 1.5px;
+  background: var(--muted);
   border-radius: 2px;
-  transition: transform .25s ease, opacity .2s ease;
+  transition: transform .25s ease, opacity .2s ease, background .2s;
 }
+.nav-toggle:hover span { background: var(--text); }
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* Mobile drawer */
+/* ── Mobile drawer ───────────────────────────────── */
 .nav-drawer {
-  display: none; /* shown via JS class */
+  display: none;
   position: fixed;
   top: var(--nav-h);
   left: 0; right: 0;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) 2rem;
+  padding: 1.25rem clamp(1.25rem, 5vw, 3.5rem) 1.75rem;
   flex-direction: column;
-  gap: .25rem;
+  gap: 0;
   z-index: 199;
-  animation: slideDown .2s ease;
+  animation: slideDown .18s ease;
 }
 .nav-drawer.open { display: flex; }
 .nav-drawer a {
   font-family: var(--display);
-  font-size: 1.05rem;
+  font-size: .95rem;
   font-weight: 600;
   color: var(--muted);
-  padding: .65rem 0;
+  padding: .7rem 0;
   border-bottom: 1px solid var(--border);
-  transition: color .15s;
+  transition: color .15s, padding-left .15s;
 }
 .nav-drawer a:last-child { border-bottom: none; }
-.nav-drawer a:hover { color: var(--text); }
+.nav-drawer a:hover { color: var(--text); padding-left: .4rem; }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-6px); }
+  from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Hamburger animation when open */
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* ── Pipeline accent line ─────────────────────────── */
+/* ── Pipeline bar ────────────────────────────────── */
 .pipeline {
-  height: 2px;
-  background: linear-gradient(90deg,transparent,var(--accent) 30%,rgba(232,169,77,.4) 70%,transparent);
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--amber) 35%,
+    var(--teal) 65%,
+    transparent 100%
+  );
   background-size: 200% 100%;
   background-position: -100% 0;
-  animation: pipe 1.4s cubic-bezier(.4,0,.2,1) forwards;
+  animation: pipe 1.6s cubic-bezier(.4,0,.2,1) forwards;
 }
 @keyframes pipe {
-  from { background-position: -100% 0; opacity: .3; }
-  to   { background-position:  100% 0; opacity: 1; }
+  from { background-position: -100% 0; opacity: .2; }
+  to   { background-position:  80% 0;  opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pipeline { animation: none; background-position: 100% 0; }
+  .pipeline { animation: none; background-position: 80% 0; }
+  .nav-logo .pipe { animation: none; }
 }
 
-/* ── Main ─────────────────────────────────────────── */
+/* ── Main ────────────────────────────────────────── */
 main {
   flex: 1;
   width: 100%;
-  max-width: 780px;
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 2.5rem) clamp(3rem, 8vw, 6rem);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) clamp(4rem, 10vw, 7rem);
 }
 
-/* ── Typography ───────────────────────────────────── */
+/* ── Typography ──────────────────────────────────── */
 h1, h2, h3, h4 {
   font-family: var(--display);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -.02em;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+  color: #EEF0F6;
 }
-h1 { font-size: clamp(1.9rem, 5vw, 3rem);   margin-bottom: .9rem; }
-h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); margin-bottom: .7rem; }
-h3 { font-size: clamp(1.05rem, 2.5vw, 1.25rem); margin-bottom: .5rem; }
+h1 { font-size: clamp(2rem, 5.5vw, 3.2rem); margin-bottom: 1rem; }
+h2 { font-size: clamp(1.3rem, 3vw, 1.9rem);  margin-bottom: .75rem; }
+h3 { font-size: clamp(1rem, 2.5vw, 1.2rem);  margin-bottom: .5rem; }
 
-p  { margin-bottom: 1.2rem; opacity: .88; }
+p { margin-bottom: 1.25rem; opacity: .85; }
 p:last-child { margin-bottom: 0; }
 
 .eyebrow {
-  font-family: var(--display);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .12em;
+  font-family: var(--mono);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: .55rem;
+  color: var(--amber);
+  margin-bottom: .6rem;
   display: block;
 }
 
-/* ── Card ─────────────────────────────────────────── */
+/* ── Card ────────────────────────────────────────── */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: clamp(1.2rem, 3vw, 1.75rem);
-  transition: border-color .2s, transform .2s;
+  border-radius: var(--r-lg);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  position: relative;
+  transition: border-color .22s, transform .22s;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, var(--amber), var(--teal));
+  border-radius: var(--r-lg) 0 0 var(--r-lg);
+  transition: height .28s ease;
 }
 .card:hover {
-  border-color: rgba(232,169,77,.4);
-  transform: translateY(-2px);
+  border-color: var(--border-lit);
+  transform: translateY(-3px);
 }
+.card:hover::before { height: 100%; }
 
-/* ── Tag ──────────────────────────────────────────── */
+/* ── Tag ─────────────────────────────────────────── */
 .tag {
   display: inline-block;
-  font-family: var(--display);
-  font-size: .68rem;
-  font-weight: 600;
+  font-family: var(--mono);
+  font-size: .65rem;
+  font-weight: 500;
   letter-spacing: .06em;
   text-transform: uppercase;
-  background: var(--accent-glow);
-  color: var(--accent);
-  border: 1px solid rgba(232,169,77,.25);
-  padding: .2rem .55rem;
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1px solid rgba(196,146,74,.2);
+  padding: .18rem .5rem;
   border-radius: 4px;
 }
-
-/* ── Accent link ──────────────────────────────────── */
-.link-accent {
-  color: var(--accent);
-  font-weight: 500;
-  transition: opacity .15s;
+.tag.teal {
+  background: var(--teal-dim);
+  color: var(--teal);
+  border-color: rgba(77,184,164,.2);
 }
-.link-accent:hover { opacity: .7; }
 
-/* ── Divider ──────────────────────────────────────── */
+/* ── Accent link ─────────────────────────────────── */
+.link-accent {
+  color: var(--amber);
+  font-weight: 500;
+  transition: color .15s;
+}
+.link-accent:hover { color: var(--teal); }
+
+/* ── Divider ─────────────────────────────────────── */
 hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2.5rem 0;
+  margin: 2.75rem 0;
 }
 
-/* ── Code ─────────────────────────────────────────── */
+/* ── Code ────────────────────────────────────────── */
 code {
-  font-size: .84em;
+  font-family: var(--mono);
+  font-size: .82em;
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: .1em .4em;
+  padding: .12em .4em;
   border-radius: 4px;
-  color: var(--accent);
+  color: var(--teal);
 }
 pre {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.25rem;
+  border-radius: var(--r-lg);
+  padding: 1.35rem 1.5rem;
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
-pre code { background: none; border: none; padding: 0; color: var(--text); }
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text);
+  font-size: .88rem;
+}
 
-/* ── Footer ───────────────────────────────────────── */
+/* ── Footer ──────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--border);
-  padding: 1.4rem clamp(1.25rem, 5vw, 3rem);
+  padding: 1.5rem clamp(1.25rem, 5vw, 3.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: .6rem;
+  gap: .75rem;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.footer-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
 }
 .footer-name {
-  font-family: var(--display);
-  font-size: .78rem;
-  font-weight: 600;
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 500;
   color: var(--muted);
 }
 .footer-note {
-  font-size: .76rem;
+  font-family: var(--display);
+  font-size: .73rem;
   color: var(--muted);
+  opacity: .7;
+  letter-spacing: .01em;
+}
+.footer-note span {
+  color: var(--border-lit);
+  margin: 0 .35em;
 }
 
-/* ── Responsive breakpoints ───────────────────────── */
+/* ── Responsive ──────────────────────────────────── */
 @media (max-width: 640px) {
-  /* Show hamburger, hide desktop links */
   .nav-toggle { display: flex; }
   .nav-links  { display: none; }
-
   footer { flex-direction: column; align-items: flex-start; }
+  .footer-note span { display: none; }
 }
 </style>
 
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">Gbarabe Tordi Joseph</a>
+<nav class="primary" aria-label="Main navigation">
+  <a href="/" class="nav-logo">
+    Gbarabe Tordi Joseph<span class="pipe" aria-hidden="true">|</span>
+  </a>
 
-  <!-- Desktop links -->
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/projects/">Projects</a>
     <a href="/blogs/">Blog</a>
-    <a href="/who-is-gbarabe-tordi-joseph/">Who Is Gbarabe Tordi Joseph?</a>
+    <a href="/who-is-gbarabe-tordi-joseph/">Who is Tordi?</a>
   </div>
 
-  <!-- Mobile hamburger -->
   <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- Mobile drawer -->
-<nav class="nav-drawer" id="nav-drawer" aria-hidden="true">
+<nav class="nav-drawer" id="nav-drawer" aria-hidden="true" aria-label="Mobile navigation">
   <a href="/">Home</a>
   <a href="/about/">About</a>
   <a href="/projects/">Projects</a>
   <a href="/blogs/">Blog</a>
-  <a href="/who-is-gbarabe-tordi-joseph/">Who Is Gbarabe Tordi Joseph?</a>
+  <a href="/who-is-gbarabe-tordi-joseph/">Who is Tordi?</a>
 </nav>
 
-<div class="pipeline"></div>
+<div class="pipeline" role="presentation"></div>
 
 <main>
   {% block content %}
@@ -441,26 +419,32 @@ footer {
 </main>
 
 <footer>
-  <span class="footer-name">Gbarabe Tordi Joseph</span>
-  <span class="footer-note">Petroleum Engineering · Software Development · University of Port Harcourt</span>
+  <div class="footer-left">
+    <div class="footer-dot"></div>
+    <span class="footer-name">gtordi.dev</span>
+  </div>
+  <span class="footer-note">
+    Petroleum Engineering<span>·</span>Software Development<span>·</span>University of Port Harcourt
+  </span>
 </footer>
 
 <script>
   const toggle = document.querySelector('.nav-toggle');
   const drawer = document.getElementById('nav-drawer');
+
   toggle.addEventListener('click', () => {
     const open = drawer.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open);
     drawer.setAttribute('aria-hidden', !open);
   });
-  // Close drawer on link click
+
   drawer.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => {
       drawer.classList.remove('open');
       toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
-      drawer.setAttribute('aria-hidden', true);
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
     })
   );
 </script>
